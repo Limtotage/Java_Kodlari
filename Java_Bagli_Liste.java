@@ -11,7 +11,7 @@ class Dugum {                                        //Bağlı Liste için Düğ
 class Bagli_Liste {                                  //Düğüm Nesnesini içerisinde barındıran Bağlı Liste Nesnesi Oluşturulur.
     Dugum Bas; 
 
-    public void Ekle(int Veri) {                     //Düğüm Eklemeyi Sağlayan Method
+    public void Ekle(int Veri) {                     //Düğüm Eklemeyi Sağlayan Metot
         Dugum Yeni_Dugum = new Dugum(Veri);
         if (Bas == null) {
             Bas = Yeni_Dugum; 
@@ -23,7 +23,7 @@ class Bagli_Liste {                                  //Düğüm Nesnesini içeri
             Simdiki.Sonraki = Yeni_Dugum; 
         }
     }
-    public boolean Bul(int Veri) {                  //Düğüm Aramayı Sağlayan Method
+    public boolean Bul(int Veri) {                  //Düğüm Aramayı Sağlayan Metot
         Dugum Simdiki = Bas;
         int i = 1;
         while (Simdiki != null) {
@@ -37,14 +37,14 @@ class Bagli_Liste {                                  //Düğüm Nesnesini içeri
         return false; 
     }
 
-    public void Listeyi_Yazdir() {                   //Bağlı Listeyi Yazdıran Method
+    public void Listeyi_Yazdir() {                   //Bağlı Listeyi Yazdıran Metot
         Dugum Simdiki = Bas; 
         while (Simdiki != null) {
             System.out.println(Simdiki.Veri ); 
             Simdiki = Simdiki.Sonraki; 
         }
     }
-    public void Listeyi_Bosalt() {                   // Listeyi Boşaltan Method
+    public void Listeyi_Bosalt() {                   // Listeyi Boşaltan Metot
         Dugum  Simdiki = Bas;
         while (Simdiki != null) {
             Dugum Sonraki_Dugum = Simdiki.Sonraki;
@@ -54,7 +54,7 @@ class Bagli_Liste {                                  //Düğüm Nesnesini içeri
         Bas = null;  
         System.out.println("Liste Temizlendi.");
     }
-    public boolean Eleman_Sil(int Veri){             // Listeden Bir Eleman Silen Method
+    public boolean Eleman_Sil(int Veri){             // Listeden Bir Eleman Silen Metot
         Dugum Simdiki = Bas;
         Dugum Onceki =Bas;
         int i = 1;
