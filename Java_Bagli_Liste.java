@@ -1,4 +1,4 @@
-class Dugum {
+class Dugum {                                        //Bağlı Liste için Düğüm Nesnesi Oluşturulur.
     int Veri; 
     Dugum Sonraki; 
 
@@ -8,10 +8,10 @@ class Dugum {
     }
 }
 
-class Bagli_Liste {
+class Bagli_Liste {                                  //Düğüm Nesnesini içerisinde barındıran Bağlı Liste Nesnesi Oluşturulur.
     Dugum Bas; 
 
-    public void Ekle(int Veri) {
+    public void Ekle(int Veri) {                     //Düğüm Eklemeyi Sağlayan Method
         Dugum Yeni_Dugum = new Dugum(Veri);
         if (Bas == null) {
             Bas = Yeni_Dugum; 
@@ -23,7 +23,7 @@ class Bagli_Liste {
             Simdiki.Sonraki = Yeni_Dugum; 
         }
     }
-    public boolean Bul(int Veri) {
+    public boolean Bul(int Veri) {                  //Düğüm Aramayı Sağlayan Method
         Dugum Simdiki = Bas;
         int i = 1;
         while (Simdiki != null) {
@@ -37,14 +37,14 @@ class Bagli_Liste {
         return false; 
     }
 
-    public void Listeyi_Yazdir() {
+    public void Listeyi_Yazdir() {                   //Bağlı Listeyi Yazdıran Method
         Dugum Simdiki = Bas; 
         while (Simdiki != null) {
             System.out.println(Simdiki.Veri ); 
             Simdiki = Simdiki.Sonraki; 
         }
     }
-    public void Listeyi_Bosalt() {
+    public void Listeyi_Bosalt() {                   // Listeyi Boşaltan Method
         Dugum  Simdiki = Bas;
         while (Simdiki != null) {
             Dugum Sonraki_Dugum = Simdiki.Sonraki;
@@ -54,7 +54,7 @@ class Bagli_Liste {
         Bas = null;  
         System.out.println("Liste Temizlendi.");
     }
-    public boolean Eleman_Sil(int Veri){
+    public boolean Eleman_Sil(int Veri){             // Listeden Bir Eleman Silen Method
         Dugum Simdiki = Bas;
         Dugum Onceki =Bas;
         int i = 1;
@@ -75,15 +75,15 @@ class Bagli_Liste {
 }
 public class Java_Bagli_Liste {
     public static void main(String[] args) {
-        Bagli_Liste Listem = new Bagli_Liste(); 
+        Bagli_Liste Listem = new Bagli_Liste();       // Liste Oluşturulur.
         Listem.Ekle(10);
         Listem.Ekle(20);
         Listem.Ekle(30);
-        Listem.Ekle(40);
+        Listem.Ekle(40);                            
         int arananDeger = 30;
         int silenecekdeger =40;
 
-        Listem.Listeyi_Yazdir(); // Bağlı listeyi yazdır
+        Listem.Listeyi_Yazdir();                      // Bağlı listeyi yazdır
 
         if (Listem.Bul(arananDeger)) {
             System.out.println(arananDeger+" Listede bulundu.");
