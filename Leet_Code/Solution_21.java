@@ -5,20 +5,10 @@ class Solution_21 {
         HashMap<Character, Integer> wmap2 = new HashMap<Character, Integer>();
         if(word1.length()==word2.length()){
             for(char ch : word1.toCharArray()){
-                if(wmap1.containsKey(ch)){
-                    wmap1.put(ch,wmap1.getOrDefault(ch,0)+1);
-                }
-                else{
-                    wmap2.put(ch,wmap2.getOrDefault(ch,0)+1);
-                }
+                wmap1.put(ch,wmap1.getOrDefault(ch,0)+1);
             }
             for(char ch : word2.toCharArray()){
-                if(wmap2.containsKey(ch)){
-                    wmap2.replace(ch, wmap2.get(ch)+1);
-                }
-                else{
-                    wmap2.put(ch,1);
-                }
+                wmap2.put(ch,wmap2.getOrDefault(ch,0)+1);
             }
             Collection<Integer> values1 = wmap1.values();
             Collection<Integer> values2 = wmap2.values();
