@@ -6,10 +6,10 @@ class Solution_21 {
         if(word1.length()==word2.length()){
             for(char ch : word1.toCharArray()){
                 if(wmap1.containsKey(ch)){
-                    wmap1.replace(ch, wmap1.get(ch)+1);
+                    wmap1.put(ch,wmap1.getOrDefault(ch,0)+1);
                 }
                 else{
-                    wmap1.put(ch,1);
+                    wmap2.put(ch,wmap2.getOrDefault(ch,0)+1);
                 }
             }
             for(char ch : word2.toCharArray()){
