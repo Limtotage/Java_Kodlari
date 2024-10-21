@@ -13,7 +13,7 @@ public class MaxHeap {
         maxHeap.add(5);
 
         // Max Heap'ten eleman çıkarırken her zaman en büyük eleman çıkar
-        System.out.println("Max Heap'den elemanlar çıkarılıyor:");
+        System.out.println("Max Heap'den elemanlar cikariliyor:");
         while (!maxHeap.isEmpty()) {
             System.out.println(maxHeap.poll());  // Her seferinde en büyük elemanı çıkarır
         }
