@@ -1,3 +1,6 @@
+/*     Two Pointers yöntemi, dizi veya string üzerinde iki işaretçi (pointer) kullanarak 
+belirli bir koşulu kontrol etmek için kullanılır. Genellikle sıralı dizilerde kullanılır 
+ve çoğu zaman O(n) karmaşıklığı ile çalışır.    */
 import java.util.Arrays;
 //Dizi içinde iki sayının toplamının belirli bir değere eşit olup olmadığını bulma.
 public class TwoPointers {
