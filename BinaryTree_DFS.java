@@ -26,21 +26,21 @@ public class BinaryTree_DFS {
 
     // Eleman ekleme metodu
     public void Ekle(int Deger) {
-        Kok = Dugum_Ekle(Kok, Deger);
+        Kok = Ekle_Recursive(Kok, Deger);
     }
 
-    private Tree_Dugumu Dugum_Ekle(Tree_Dugumu Dugum, int Deger) {
+    private Tree_Dugumu Ekle_Recursive(Tree_Dugumu Dugum, int Deger) {
       // Eğer duğum bossa, yeni bir duğum olustur
         if (Dugum == null) {
             return new Tree_Dugumu(Deger);
         }
       // Değer, mevcut duğum değerinden daha kucukse sol alt duğume ekle
         if (Deger < Dugum.Deger) {
-            Dugum.Sol = Dugum_Ekle(Dugum.Sol, Deger);
+            Dugum.Sol = Ekle_Recursive(Dugum.Sol, Deger);
         }
           // Değer, mevcut duğum değerinden daha buyukse sağ alt duğume ekle
         else if (Deger > Dugum.Deger) {
-            Dugum.Sag = Dugum_Ekle(Dugum.Sag, Deger);
+            Dugum.Sag = Ekle_Recursive(Dugum.Sag, Deger);
         }
       // Değeri zaten mevcutsa hicbir sey yapma
         return Dugum;
