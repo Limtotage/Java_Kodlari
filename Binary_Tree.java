@@ -43,7 +43,7 @@ public class BinaryTree {
         return Dugum;
     }
 
-    // In-order traversal
+    // In-order Gez
     public void Agac_Gez(Tree_Dugumu Dugum) {
         if (Dugum != null) {
             Agac_Gez(Dugum.Sol);
@@ -62,7 +62,7 @@ public class BinaryTree {
         Agac.Ekle(60);
         Agac.Ekle(80);
 
-        System.out.print("In-order Traversal of Binary Tree: ");
+        System.out.print("Binary Tree In-order Gezildi: ");
         Agac.Agac_Gez(Agac.Kok);
     }
 }
