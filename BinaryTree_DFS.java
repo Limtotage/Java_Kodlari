@@ -17,10 +17,10 @@ class Tree_Dugumu {
     }
 }
 
-public class BinaryTree {
+public class BinaryTree_DFS {
     private Tree_Dugumu Kok;
 
-    public BinaryTree() {
+    public BinaryTree_DFS() {
         Kok = null;
     }
 
@@ -74,7 +74,7 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
-        BinaryTree Agac = new BinaryTree();
+        BinaryTree_DFS Agac = new BinaryTree_DFS();
         Agac.Ekle(50);
         Agac.Ekle(30);
         Agac.Ekle(20);
