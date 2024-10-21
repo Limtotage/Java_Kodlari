@@ -4,7 +4,7 @@ class Graph_DFS {
     private int Dugum_Sayisi;          
     private LinkedList<Integer>[] Komsuluk_Listesi;
 
-    public GraphDFS(int Dugum_Sayisi) {
+    public Graph_DFS(int Dugum_Sayisi) {
         this.Dugum_Sayisi = Dugum_Sayisi;
         Komsuluk_Listesi = new LinkedList[Dugum_Sayisi];
         for (int i = 0; i < Dugum_Sayisi; i++) {
@@ -36,7 +36,7 @@ class Graph_DFS {
     }
 
     public static void main(String[] args) {
-        GraphDFS graph = new GraphDFS(6);
+        Graph_DFS graph = new Graph_DFS(6);
 
         graph.Kenar_Ekle(0, 1);
         graph.Kenar_Ekle(0, 2);
